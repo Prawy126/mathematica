@@ -1,0 +1,41 @@
+zadanie 1
+W powyższym kodzie brakuje zamknięcia funkcji StyleForm. Aby poprawić kod, należy dodać nawias zamykający po tekście "Funkcja" oraz dodać przecinek pomiędzy opisem osi x a opisem osi y. Poprawiony kod wygląda następująco. W tym kodzie dodano również tytuł wykresu przy pomocy opcji PlotLabel. Oczywiście, aby dodać podpisy osi x i y, możemy użyć opcji AxesLabel. Zmodyfikowany kod wyglądałby następująco. W powyższym kodzie dodano opcję AxesLabel, która zawiera dwa elementy - etykietę osi x i y. Każda z tych etykiet jest stylizowana na czerwono i niebiesko z użyciem StyleForm, a ich wielkości czcionki są ustawione na 12. Aby dodać linię siatki do wykresu, możemy użyć opcji GridLines. Oto modyfikacja kodu z dodaną linią siatki. W powyższym kodzie opcja GridLines została ustawiona na Automatic, co spowoduje wyświetlenie lini siatki na osiach x i y z domyślnymi stylami. Można również dostosować linię siatki, ustawiając wartości w GridLines, np. GridLines -> {Range[0, 2 Pi, Pi/4], Automatic}. Aby dodać opis na osi x w radianach z odstępem π/4, możemy zmodyfikować kod, używając opcji Ticks. Oto modyfikacja kodu. W powyższym kodzie opcja Ticks została ustawiona na {Range[0, 2 Pi, Pi/4], Automatic}, co spowoduje wyświetlenie etykiet na osi x co π/4 z wartościami radianów, a etykiety na osi y będą ustawione automatycznie. Aby wykreślenie wykresu o proporcjach 3:1, możemy dodać opcję AspectRatio -> 1/3 do kodu, jak pokazano poniżej. Opcja AspectRatio -> 1/3 powoduje, że wykres będzie miał wysokość równej trzeciej części jego szerokości.
+
+zadanie 2
+Można narysować wykresy funkcji sin(x), cos(x), sin(x)cos(x) oraz |sin(x)| na jednym wykresie w następujący sposób. W powyższym kodzie, każda funkcja jest definiowana przez oddzielne wyrażenie w liście Plot. Każdemu z wykresów jest przypisany inny kolor i grubość linii poprzez opcję PlotStyle. Osie są opisane przez opcję FrameLabel, a tytuł wykresu jest ustawiony przez opcję PlotLabel. Legenda jest generowana przez opcję PlotLegends.
+
+zadanie 3
+W tym kodzie użyto opcji PlotStyle z Directive, aby zmienić styl rysowania na grubą niebieską linię. Opcja FrameLabel została zmodyfikowana, aby ustawić napis log10(Cos[3x]^2) na osi Y i usunąć opis osi X. Opcja PlotLabel dodaje tytuł na górze wykresu. Ostatecznie, opcja Background ustawia kolor tła na jasnożółty.
+
+zadanie 4
+W tym kodzie funkcja LogLogPlot jest używana do rysowania wykresów w skali podwójnie logarytmicznej. Opcja PlotStyle jest używana do zmiany stylów linii dla każdej z funkcji. Opcja GridLines jest używana do włączenia siatki na wykresie. Opcja FrameLabel jest używana do dodania etykiet osi X i Y z odpowiednimi kolorami dla każdej funkcji. Ostatecznie, opcja PlotLegends jest używana do dodania legendy z etykietami dla każdej funkcji.
+
+zadanie 5
+Funkcja x=10exp(0,4*t)sin(πt) opisuje ruch drgający tłumiony, gdzie czynniki 10*Exp[0.4*t] i Sin[Pi*t] odpowiadają amplitudzie i częstotliwości drgań, odpowiednio. Amplituda jest opisana przez czynnik 10*Exp[0.4*t], który zmienia się w czasie, a częstotliwość jest opisana przez czynnik Sin[Pi*t], który powoduje oscylacje na poziomie π. Ograniczenie zakresu rysowania do 0 do 5 w zakresie zmienności x pozwoli nam lepiej zobaczyć charakterystykę ruchu.
+
+zadanie 6
+Jeśli zobaczymy ten wykres, to zauważymy, że wygląda on poprawnie, ale może być trudny do odczytania, ponieważ osie nie są odpowiednio oznaczone. W celu poprawienia wykresu możemy dodać opisy osi, tytuł wykresu, a także zmienić skalę osi, aby łatwiej odczytywać wartości na wykresie. Teraz wykres będzie posiadał opisy osi, tytuł oraz skalę osi odpowiednią do przedstawionej funkcji.
+
+zadanie 8
+Aby narysować wykres funkcji f(x,y)=sinx*cosy w zakresie od -2π do 2π w programie Mathematica, można użyć funkcji Plot3D. Wykres ten przedstawia powierzchnię, gdzie kolor oznacza wartość funkcji f(x,y), a trzeci wymiar odpowiada wartości tej funkcji. Można też dodać opcję ContourStyle -> None aby pozbyć się kolorowania powierzchni i uzyskać jedynie kontury wykresu.Ten wykres przedstawia wartości funkcji f(x,y) jako kolory na płaszczyźnie. Dzięki temu można łatwiej zobaczyć, gdzie wartości funkcji są większe lub mniejsze. 
+a) Można usunąć siatkę i kolorowanie wykresu poprzez dodanie opcji Mesh -> None oraz ColorFunction -> None w funkcji Plot3D. Oto przykładowy kod. Wynikowy wykres nie będzie miał siatki i będzie czarno-biały.
+b) Aby ustawić punkt obserwacji tak, aby wykres był widoczny z góry, należy dodać opcję ViewPoint -> {0, 0, Infinity} do funkcji Plot3D. Wynikowy wykres będzie miał perspektywę z punktu patrzenia umieszczonego na nieskończoności w kierunku osi z
+c) Aby zwiększyć liczbę punktów na podstawie których rysowany jest wykres do 100 dla każdej zmiennej, możemy zmodyfikować kod poprzedniego wykresu przez dodanie opcji PlotPoints -> 100
+
+zadanie 10
+Aby narysować parametryczny wykres na podstawie podanych funkcji, możemy skorzystać z funkcji ParametricPlot3D w języku Mathematica. Wykres przedstawia sferę, którą można obracać za pomocą myszy w środowisku Mathematica. Aby uzyskać podobny wygląd jak na przykładzie, możemy zmodyfikować zakres osi oraz ustawić punkt obserwacj.Otrzymujemy w ten sposób wykres kulisty, który widzimy z góry, z punktu widzenia położonego nad kamerą. Można jeszcze dodać opcję Lighting -> "Neutral" aby usunąć cienie rzucane na powierzchnię kuli 
+
+zadanie 11
+Do wygenerowania 100 liczb losowych z przedziału [0,10] można użyć funkcji RandomReal z podanym zakresem jako argumentem. Wykres zostanie narysowany jako punkty o losowych współrzędnych na osiach X i Y, a argument PlotStyle -> Red ustawia kolor wykresu na czerwony, a AxesOrigin -> {0, 0} ustawia początek osi na punkcie (0,0). Można również dodać opisy osi i tytuł wykresu używając argumentów AxesLabel i PlotLabel.
+
+zadanie 12
+Wynikowy wykres przedstawia trzy krzywe: sin(x) w kolorze czerwonym, sin(3x) w kolorze zielonym i 3sin(x) w kolorze niebieskim, z połączonymi liniami na ostatnim punkcie każdej krzywe
+
+zadanie 13
+Kod ten generuje animację funkcji sinus, gdzie kolejne wartości funkcji są wyświetlane po kolei w ramach animacji. Można oczywiście zmienić funkcję f na dowolną inną funkcję oraz dostosować zakres i krok wartości argumentów.
+
+zadanie 14
+Kod ten generuje animację funkcji sinus, gdzie kolejne wartości funkcji są wyświetlane po kolei w ramach animacji. Można oczywiście zmienić funkcję f na dowolną inną funkcję oraz dostosować zakres i krok wartości argumentów.
+
+zadnie 15
+W powyższym kodzie można zmienić wartości parametrów freqs i amps na inne, aby uzyskać dźwięki o innych częstotliwościach i amplitudach. Kod generuje trzy dźwięki o częstotliwościach 440 Hz, 880 Hz i 1760 Hz, o amplitudach odpowiednio 0.3, 0.6 i 0.9. Dźwięki są odtwarzane równocześnie jako jedna ścieżka dźwiękowa.
